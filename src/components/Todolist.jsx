@@ -9,7 +9,16 @@ const Todolist = ({todos, title}) => {
             <Todo key={todo.id} todo = {todo}/>
         )
     })
-
+    if (todos.length === 0) {
+      return (
+      <>
+        <p>No todos available</p>
+        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+        Learn React
+        </a>
+      </>
+      );
+    }
 
   return (
     
